@@ -1,3 +1,6 @@
+// Класс позволяет расчитать бонусы
+const audienceThreshold = require('../constants/creditsSettings');
+
 class Credits {
     constructor(invoice){
         this.invoice = invoice;
@@ -7,7 +10,7 @@ class Credits {
         this.creditsVolume = 0;
         this.comedyCounter = 0;
         for (let perf of this.invoice.performance) {
-            this.creditsVolume += Math.max(perf.audience - 30, 0);
+            this.creditsVolume += Math.max(perf.audience - audienceThreshold, 0);
             if (perf.type === 'comedy') {
                 this.calcComedyCredits(perf);
             }

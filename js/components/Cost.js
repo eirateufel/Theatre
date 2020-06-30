@@ -1,3 +1,5 @@
+// Класс позволяет расчитать общую стоимость (totoalAmount) и стоимость каждой отдельной постановки (transcript)
+
 const {
     tragedyBaseCost, tragedyAddViewerCost, tragedyAudienceThreshold,
 } = require('../constants/tragedy');
