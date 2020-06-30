@@ -1,6 +1,6 @@
-const tragedyBaseCost = 40000;
-const tragedyAddViewerCost = 1000;
-const tragedyAudienceThreshold = 30;
+const tragedyBaseCost = 40000; // базовая стоимость трагедии
+const tragedyAddViewerCost = 1000; // доплата за одного дополнительного зрителя
+const tragedyAudienceThreshold = 30; // порог численности зрителей после которого начисляется доплата
 
 module.exports = {
 	tragedyBaseCost, tragedyAddViewerCost, tragedyAudienceThreshold,
