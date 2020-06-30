@@ -1,5 +1,7 @@
 // Класс позволяет расчитать бонусы
-const audienceThreshold = require('../constants/creditsSettings');
+
+// параметры для расчета бонусов
+const { audienceThreshold, eachComedy } = require('../constants/creditsSettings');
 
 class Credits {
     constructor(invoice){
@@ -20,7 +22,7 @@ class Credits {
 
     calcComedyCredits(perf) {
             this.comedyCounter += 1;
-        if (this.comedyCounter === 10) {
+        if (this.comedyCounter === eachComedy) {
             this.creditsVolume += math.floor(perf.audience / 5);
             this.comedyCounter = 0;
         }
