@@ -14,9 +14,10 @@ class Statement {
         this.statement = `Счет для ${this.customer}\n`;
         for (let play of this.transcript) {
             this.statement += `${play[0]}: ${costFormat.format(play[1]/100)} (${play[2]} мест)\n`;
-            this.statement += `Итого с вас ${costFormat.format(this.total/100)}\n`;
-            this.statement += `Вы заработали ${this.credits} бонусов.\n`;
         }
+        this.statement += `Итого с вас ${costFormat.format(this.total/100)}\n`;
+        this.statement += `Вы заработали ${this.credits} бонусов.\n`;
+
         return this.statement;
     }
 }
