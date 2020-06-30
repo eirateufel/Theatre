@@ -41,7 +41,7 @@ class Cost {
                     this.totoalAmount += this.calcComedy(perf);
                     break;
                 default:
-                    throw new Error(`неизвестный тип: ${play.type}`);
+                    throw new Error(`неизвестный тип: ${perf.type}`);
             }
             this.transcript.push([perf.playId, this.cost, perf.audience]);
         }
